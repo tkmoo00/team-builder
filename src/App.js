@@ -33,7 +33,7 @@ function App() {
       .post("https://reqres.in/api/users", formValues)
       .then((res) => {
         console.log(res);
-        // setMembers([ res.data, ...members])
+        setMembers([res.data, ...members]);
       })
       .catch((err) => console.error(err))
       .finally(setFormValues(initialValues));
